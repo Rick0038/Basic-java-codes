@@ -73,17 +73,19 @@ public static void main(String args[])
 		System.out.println("Entry no: "+(i+1));		
 		System.out.println("Enter Employee id");
 		int l=input.nextInt();
+                input.nextLine();
 		System.out.println("Enter the employee name");
-
-		//Scanner yup=new Scanner(System.in); //logic ki ??//
-
 		String imp=new String();
 		imp=input.nextLine();
 		System.out.println("Enter Employee phone number");
 		int j=input.nextInt();
 		System.out.println("Enter employee status");
 		char k=input.next().charAt(0);
+
+
 		objarr[i].input_data(imp,l,j,k);
+
+
 		}
 	
 	for(i=0;i<tot;i++)
