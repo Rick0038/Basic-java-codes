@@ -29,70 +29,61 @@ import java.io.*;
 class packet
 {
 	String na;
-	int id;
+	String id;
 	int phn;
 	char empst;
 	
-	void input_data(String x,int y,int z,char a)
+	void input_data(String x,String y,int z,char a)
 	{
 		na=x;
 		id=y;
 		phn=z;
 		empst=a;
-		System.out.println("Given data inserted");
+		System.out.println("\n\t Data recorded");
 	}
 
 	void output_data()
 	{
-		System.out.println("Enter the employee name"+na);
-		System.out.println("Enter the employee id"+id);
-		System.out.println("Enter the employee phone number"+phn);
-		System.out.println("Enter the employee status"+empst);
+		System.out.println("\t The employee name is :"+na);
+		System.out.println("\t The employee ID is :"+id);
+		System.out.println("\t The employee phone number is :"+phn);
+		System.out.println("\t The employee status is :"+empst);
 	}
-
-	packet()
-	{
-		System.out.println("Entry Created");
-		System.out.println("Pls Enter the data");
-	}
-	
 		
 }
 public class Classdemo
 {
-public static void main(String args[])
+	public static void main(String args[])
 	{
-	int i;	
-	packet objarr[];
-	objarr = new packet[10];
-	Scanner input=new Scanner(System.in);
-	System.out.println("How many entries you want");
-	int tot=input.nextInt();
-	for(i=0;i<tot;i++)
-		{	
-		System.out.println("Entry no: "+(i+1));		
-		System.out.println("Enter Employee id");
-		int l=input.nextInt();
-                input.nextLine();
-		System.out.println("Enter the employee name");
-		String imp=new String();
-		imp=input.nextLine();
-		System.out.println("Enter Employee phone number");
-		int j=input.nextInt();
-		System.out.println("Enter employee status");
-		char k=input.next().charAt(0);
+		int i;	
+		packet objarr[];
+		objarr = new packet[10];
+		Scanner input=new Scanner(System.in);
+		System.out.println("How many entries you want");
+		int tot=input.nextInt();
+		for(i=0;i<tot;i++)
+			{	
+				System.out.println("\n\t Entry no: "+(i+1));				
+				System.out.print("\t Enter Employee id :");
+				String l=input.next();
+				input.nextLine();
+				System.out.print("\t Enter the employee name : ");
+				String imp=new String();
+				imp=input.nextLine();
+				System.out.print("\t Enter Employee phone number : ");
+				int j=input.nextInt();
+				System.out.print("\t Enter employee status : ");
+				char k=input.next().charAt(0);
+				objarr[i]=new packet();
+				objarr[i].input_data(imp,l,j,k);				
 
-
-		objarr[i].input_data(imp,l,j,k);
-
-
-		}
+			}
 	
-	for(i=0;i<tot;i++)
-		{
-		System.out.print("Entry no "+i+"is");
-		objarr[i].output_data();
-		}
-	System.out.println("Program Ended");
+		for(i=0;i<tot;i++)
+			{
+				System.out.print("\n\t Printing the stored data\n");
+				System.out.print("\n\t Entry no "+(i+1)+"is\n");
+				objarr[i].output_data();
+			}
 	}
 }
