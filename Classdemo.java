@@ -177,24 +177,24 @@ class createfile
 		char opnion=input.next().charAt(0);	
 		do
 		{	switch(opnion)
-				{
-					case 'Y':
-					case 'y':	for(int Lo=0;Lo<tot;Lo++)
-								{
-									System.out.print("\n\t Printing the stored data\n");
-									System.out.print("\n\t Entry no "+(Lo+1)+" is\n");
-									objarr[Lo].output_data();
-									flag=false;
-								}
-								break;
-					case 'N': 
-					case 'n': 	System.out.println("\n\t Ok!!");
-								flag=false;
-								break;
-					default: 	System.out.println("\n\t Wrong input");
-								System.out.print("\n\t Input again :");
-								opnion=input.next().charAt(0);
-				}
+			{
+			        case 'Y':
+				case 'y':for(int Lo=0;Lo<tot;Lo++)
+					{
+						System.out.print("\n\t Printing the stored data\n");
+						System.out.print("\n\t Entry no "+(Lo+1)+" is\n");
+						objarr[Lo].output_data();
+						flag=false;
+					}
+					 break;
+				case 'N': 
+				case 'n':System.out.println("\n\t Ok!!");
+					 flag=false;
+					 break;
+				default: System.out.println("\n\t Wrong input");
+					 System.out.print("\n\t Input again :");
+				         opnion=input.next().charAt(0);
+			}
 		}while(flag);	
 	}
 	
@@ -211,20 +211,20 @@ class createfile
 		{	switch(opnion)
 				{
 					case 'Y':
-					case 'y':	for(int Lo=0;Lo<tot;Lo++)
-								{
-									objarr[Lo].process_data();
-								}
-								System.out.println("\n\t Data recorded");
-								flag=false;
-								break;
+					case 'y':for(int Lo=0;Lo<tot;Lo++)
+							{
+								objarr[Lo].process_data();
+							}
+							System.out.println("\n\t Data recorded");
+							flag=false;
+							break;
 					case 'N': 
-					case 'n': 	System.out.println("\n\t Storage cancelled");
-								flag=false;
-								break;
-					default: 	System.out.println("\n\t Wrong input");
-								System.out.print("\n\t Input again :");
-								opnion=input.next().charAt(0);
+					case 'n': System.out.println("\n\t Storage cancelled");
+						  flag=false;
+						  break;
+					default:  System.out.println("\n\t Wrong input");
+					 	  System.out.print("\n\t Input again :");
+						  opnion=input.next().charAt(0);
 				}
 		}while(flag);	
 			
