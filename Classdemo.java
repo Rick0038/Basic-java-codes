@@ -55,10 +55,10 @@ public class Classdemo
 				{
 					case 1:  in.push_data();
 							 break;
-				    case 2:  in.pop_data();
+				        case 2:  in.pop_data();
 							 break;
-				    case 3:  in.store_data();
-							 break;
+				        case 3:  in.store_data();
+							break;
 					case 4:  System.exit(0);
 							 break;
 					default: System.out.println("\n\tOops !!  Look's like you have pressed a wrong button.");											
